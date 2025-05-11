@@ -1,381 +1,163 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .hero {
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .hero .btn {
-    background: white;
-    color: #3a7bd5;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  
-  .hero .btn:hover {
-    background: #3a6073;
-    color: white;
-  }
-  
-  .top {
-    position: absolute;
-    background: linear-gradient(to bottom, white, rgb(75, 25, 245));
-  }
-  
-  header {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(88, 12, 12, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  
-  #container {
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-    color: black;
-  }
-  
-  #nav {
-    padding-top: 15px;
-    font-size: xx-large;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  a {
-    color: rgb(137, 137, 137);
-    text-decoration: none;
-    margin-right: 15px;
-  }
-  
-  a:hover {
-    color: black;
-  }
-  
-  #about {
-    padding-top: 15%;
-  }
-  
-  .about {
-    padding: 0 15%;
-    text-align: center;
-    font-size: 1.7rem;
-  }
-  
-  .education {
-    padding-top: 15%;
-    font-size: 1.7rem;
-    text-align: center;
-  }
-  
-  #education-parts {
-    text-align: left;
-    padding: 20px;
-    margin-bottom: 30px;
-    margin-left: 15%;
-    width: 70%;
-  
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    background-color: white; 
-    transition: box-shadow 0.3s ease;
-    backdrop-filter: blur(15px);
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.3);
-
-  }
-  .first {
-    width: 10px;
-    height: 1px;
-  }
-  
-  #skill {
-    padding-top: 10%;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #111;
-  }
-  
-  .skills-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding-top: 50px;
-  }
-  
-  .skills-row {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .skill-card {
-    backdrop-filter: blur(15px);
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.3);
-
-    width: 300px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    padding: 24px 20px;
-    transition: transform 0.2s ease;
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skill-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-  }
-  
-  .skill-desc {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-    color: #555;
-  }
-  
-  .skill {
-    padding-top: 120px;
-  }
-  
-  .lighter {
-    font-weight: lighter;
-  }
-  
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .contact {
-    padding: 25% 10%;
-    color: black;
-    text-align: center;
-    
-    transition: background 0.3s ease, color 0.3s ease;
-    height: 500px;
-  }
-  
-  .contact-container p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  
-  .contact-container a {
-    color: #3a7bd5;
-    text-decoration: none;
-  }
-  
-  .contact-container a:hover {
-    text-decoration: underline;
-  }
-  
-  header.transparent {
-    background: transparent !important;
-    backdrop-filter: none !important;
-    box-shadow: none !important;
-  }
-  
- 
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  .hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  
-  
-  @media (max-width: 768px) {
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
     header {
-      flex-direction: row;
+      background: linear-gradient(to right, #000000, #333333);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
       align-items: center;
-      height: auto;
-      padding: 1rem;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-  
-    #nav {
-      position: absolute;
-      top: 60px;
-      right: 1rem;
-      background: rgba(0, 0, 0, 0.85);
-      padding: 1rem;
-      border-radius: 10px;
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 1001;
-    }
-  
-    #nav.active {
-      display: flex;
-    }
-  
-    #nav a {
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      color: white;
-    }
-  
-    .hamburger-menu {
-      display: flex;
-    }
-  
-    .hero-content h1 {
+    .logo {
       font-size: 2rem;
-      text-align: center;
+      font-weight: bold;
+      animation: fadeDown 1s ease-out;
     }
-  
-    .hero-content p {
-      font-size: 1rem;
-      text-align: center;
+    nav {
+      display: flex;
+      gap: 20px;
     }
-  
-    .btn {
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      margin-top: 1rem;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.9s ease;
     }
-  
-    .skills-row {
+    nav a:hover {
+      color: #00bfff;
+    }
+    .hero {
+     background-image: url('Screen\ Recording\ 2025-05-11\ at\ 11.02.04\ AM.mov');
+     background-size: cover;
+     background-position: center;
+      height: 90vh;
+      display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      animation: fadeIn 1.5s ease-in-out;
     }
-  
-    .skill-card {
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #006eff;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: #004db3;
+      transform: scale(1.05);
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .product img {
+      height: 255px;
+      
       width: 100%;
-      font-size: 0.9rem;
+      border-radius: 10px;
     }
-  
-    #education-parts h3,
-    #education-parts h4,
-    #education-parts p {
+    .product h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    form {
+      background: #fff;
+      max-width: 500px;
+      margin: 30px auto 0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      cursor: pointer;
+    }
+    #lease-confirmation {
+      color: #28a745;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      background: #e6f9ec;
+      border: 1px solid #28a745;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+    footer {
+      background: #222;
+      color: white;
       text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
     }
-  
-    .contact-container p {
-      font-size: 0.95rem;
-      text-align: center;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
-  
-   
-  }
-
-
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 1.4rem;
-}
-
-.contact-container a {
-    color: rgb(83, 83, 220);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-container a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-.contact {
-    padding: 60px 10%;
-    background-color: rgb(158, 136, 245);;
-    color: #ffffff;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    margin: 60px auto;
-    width: 85%;
-  }
-  
- 
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 1.2rem;
-  }
-  
- 
-  
-  .contact-container a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-  }
-  #contact {
-    display: block;
-    padding: 60px 20px;
-}
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   
