@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drone Bazaar - Buy, Sell & Lease Drones in India</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <h1>DroneBazaar.in</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="#lease">Lease</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Explore the Future of Flight</h2>
+    <p>Buy, sell, or lease drones with ease on India's top drone marketplace</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <section class="section" id="features">
+    <h2>Why Choose Us?</h2>
+    <p>We offer the best drones at competitive prices with trusted sellers all over India.</p>
+  </section>
+
+  <section class="section" id="products">
+    <h2>Top Drones</h2>
+    <div class="products">
+      <div class="product">
+        <img src="1.jpg" alt="DJI Mini 3 Pro"/>
+        <h3>DJI Mini 3 Pro</h3>
+        <p class="price">₹78,990</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="2.jpg" alt="Racing Drone"/>
+        <h3>Quadcopter Racing Drone</h3>
+        <p class="price">₹24,500</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="3.jpeg" alt="Mini Drone"/>
+        <h3>Foldable Mini Drone</h3>
+        <p class="price">₹5,499</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="4.jpg" alt="DJI Air 2S"/>
+        <h3>DJI Air 2S</h3>
+        <p class="price">₹89,999</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lease">
+    <h2>Lease a Drone</h2>
+    <p>Need a drone for a short-term project? Fill out the form below to lease one.</p>
+    <form id="leaseForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="City / Location" required />
+      <select required>
+        <option value="">Select Drone Type</option>
+        <option value="mini">Mini Drone</option>
+        <option value="racing">Racing Drone</option>
+        <option value="professional">Professional Drone</option>
+      </select>
+      <input type="number" placeholder="Lease Duration (in days)" required />
+      <textarea placeholder="Additional Requirements" rows="4"></textarea>
+      <button type="submit" class="btn">Submit Lease Request</button>
+      <div id="lease-confirmation"></div>
+    </form>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or want to list your drone for lease? Reach out to us at <strong>support@dronebazaar.in</strong></p>
+  </section>
+
+  <footer>
+    &copy; 2025 DroneBazaar.in | Buy, Sell & Lease Drones in India
+  </footer>
+
+  <script>
+    document.getElementById("leaseForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const confirmation = document.getElementById("lease-confirmation");
+      confirmation.innerText = "✅ Thank you! We will contact you on your email soon.";
+      confirmation.style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
